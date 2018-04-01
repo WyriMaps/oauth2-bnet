@@ -4,6 +4,7 @@ namespace Depotwarehouse\OAuth2\Client\Provider;
 
 use Depotwarehouse\OAuth2\Client\Entity\BattleNetUser;
 use Depotwarehouse\OAuth2\Client\Entity\SC2User;
+use Depotwarehouse\OAuth2\Client\Entity\User;
 use Depotwarehouse\OAuth2\Client\Entity\WowUser;
 use Guzzle\Http\Exception\BadResponseException;
 use League\OAuth2\Client\Exception\IDPException;
@@ -88,5 +89,19 @@ abstract class BattleNet extends AbstractProvider
             $data = (is_array($data)) ? $data : json_decode($data, true);
             throw new IdentityProviderException($data['error_description'], $response->getStatusCode(), $data);
         }
+    }
+
+    public function getResourceOwnerDetailsUrl(AccessToken $token)
+    {
+        return "https://{$this->region}.api.battle.net/account/user?access_token={$token}";
+    }
+
+    protected function createResourceOwner(array $response, AccessToken $token)
+    {
+        $response = (array)($response);
+
+        $user = new User($response, $this->region);
+
+        return $user;
     }
 }

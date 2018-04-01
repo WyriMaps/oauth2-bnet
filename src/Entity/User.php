@@ -4,7 +4,7 @@ namespace Depotwarehouse\OAuth2\Client\Entity;
 
 use League\OAuth2\Client\Provider\ResourceOwnerInterface;
 
-class WowUser implements ResourceOwnerInterface
+class User implements ResourceOwnerInterface
 {
 
     /**
@@ -26,6 +26,6 @@ class WowUser implements ResourceOwnerInterface
 
     public function getId()
     {
-        return $this->data[0]['id'];
+        return $this->data['id'];
     }
 }
