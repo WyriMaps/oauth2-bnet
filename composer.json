@@ -1,8 +1,12 @@
 {
-    "name": "depotwarehouse/oauth2-bnet",
+    "name": "wyrimaps/oauth2-bnet",
     "description": "A Battle.net provider for league/oauth2-client",
     "license": "MIT",
     "authors": [
+        {
+            "name": "Cees-Jan Kiewiet",
+            "email": "ceesjank@gmail.com"
+        },
         {
             "name": "Troy Pavlek",
             "email": "troy@tpavlek.me",
@@ -12,15 +16,11 @@
     ],
     "autoload": {
         "psr-4": {
-            "Depotwarehouse\\OAuth2\\Client\\": "src/"
+            "WyriMaps\\OAuth2\\Client\\": "src/"
         }
     },
     "require": {
         "php": ">=5.5.0",
-        "league/oauth2-client": "^1.0",
-        "illuminate/contracts": "^5.1"
-    },
-    "suggest": {
-        "illuminate/support": "Laravel integration"
+        "league/oauth2-client": "^1.0"
     }
 }

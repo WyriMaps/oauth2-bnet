@@ -1,10 +1,6 @@
 <?php
 
-namespace Depotwarehouse\OAuth2\Client\Provider;
-
-use Depotwarehouse\OAuth2\Client\Entity\SC2User;
-use League\OAuth2\Client\Provider\ResourceOwnerInterface;
-use League\OAuth2\Client\Token\AccessToken;
+namespace WyriMaps\OAuth2\Client\Provider;
 
 class SC2Provider extends BattleNet
 {

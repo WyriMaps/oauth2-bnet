@@ -1,18 +1,12 @@
 <?php
 
-namespace Depotwarehouse\OAuth2\Client\Provider;
+namespace WyriMaps\OAuth2\Client\Provider;
 
-use Depotwarehouse\OAuth2\Client\Entity\BattleNetUser;
-use Depotwarehouse\OAuth2\Client\Entity\SC2User;
-use Depotwarehouse\OAuth2\Client\Entity\User;
-use Depotwarehouse\OAuth2\Client\Entity\WowUser;
-use Guzzle\Http\Exception\BadResponseException;
-use League\OAuth2\Client\Exception\IDPException;
 use League\OAuth2\Client\Provider\AbstractProvider;
 use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
-use League\OAuth2\Client\Provider\ResourceOwnerInterface;
 use League\OAuth2\Client\Token\AccessToken;
 use Psr\Http\Message\ResponseInterface;
+use WyriMaps\OAuth2\Client\Entity\User;
 
 abstract class BattleNet extends AbstractProvider
 {

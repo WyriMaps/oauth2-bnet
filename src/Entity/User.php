@@ -1,6 +1,6 @@
 <?php
 
-namespace Depotwarehouse\OAuth2\Client\Entity;
+namespace WyriMaps\OAuth2\Client\Entity;
 
 use League\OAuth2\Client\Provider\ResourceOwnerInterface;
 

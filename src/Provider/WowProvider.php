@@ -1,9 +1,6 @@
 <?php
 
-namespace Depotwarehouse\OAuth2\Client\Provider;
-
-use Depotwarehouse\OAuth2\Client\Entity\WowUser;
-use League\OAuth2\Client\Token\AccessToken;
+namespace WyriMaps\OAuth2\Client\Provider;
 
 class WowProvider extends BattleNet
 {
