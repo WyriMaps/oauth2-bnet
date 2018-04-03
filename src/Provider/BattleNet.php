@@ -92,10 +92,6 @@ abstract class BattleNet extends AbstractProvider
 
     protected function createResourceOwner(array $response, AccessToken $token)
     {
-        $response = (array)($response);
-
-        $user = new User($response, $this->region);
-
-        return $user;
+        return new User((array)($response), $this->region);
     }
 }
