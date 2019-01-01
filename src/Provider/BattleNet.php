@@ -87,7 +87,7 @@ abstract class BattleNet extends AbstractProvider
 
     public function getResourceOwnerDetailsUrl(AccessToken $token)
     {
-        return "https://{$this->region}.api.battle.net/account/user?access_token={$token}";
+        return "https://{$this->region}.battle.net/oauth/userinfo?access_token={$token}";
     }
 
     protected function createResourceOwner(array $response, AccessToken $token)
